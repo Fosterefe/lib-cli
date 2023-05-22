@@ -4,11 +4,17 @@ use crate::utils::storage::Store;
 
 pub fn all_contacts(store: &mut Store) {
         
-    for person in store.store.iter() {
-        println!("{:?}", person);
-    }
+    for (i, person) in store.store.iter().enumerate() {
+        println!("-------------------");
+        println!("Contact: {}", i + 1);
+        
+        println!("\nName: {}", person.name);
+        println!("\nLastName: {}", person.lastname);
+        println!("\nAddress: {}", person.address);
+        println!("\nEmail: {}", person.email);
 
-    println!("{:?}", store.store);
+        println!("-------------------");
+    }
 
     println!("Press any to go to the menu!");
     let mut ui = String::new();

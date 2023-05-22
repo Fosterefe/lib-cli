@@ -1,10 +1,11 @@
 pub mod models {
-    #[derive(Debug)] #[allow(dead_code)]
-        pub struct Person {
-        name: String,
-        lastname: String,
-        address: String,
-        email: String,
+    #[derive(Debug)]
+    #[allow(dead_code)]
+    pub struct Person {
+        pub name: String,
+        pub lastname: String,
+        pub address: String,
+        pub email: String,
     }
 
     impl Person {

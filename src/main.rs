@@ -3,7 +3,9 @@ pub mod utils;
 pub mod views;
 
 use crate::views::menu::menu;
+use crate::utils::storage::Store;
 
 fn main() {
-    menu();
+    let mut store = Store::new();
+    menu(&mut store);
 }
