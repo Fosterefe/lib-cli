@@ -3,6 +3,7 @@ use std::{io, process::Command};
 use crate::views::add_user_menu::add_user_menu;
 use crate::views::see_all_contacts::all_contacts;
 use crate::utils::storage::Store;
+use crate::views::search_by_name::search_by_name;
 
 pub fn menu(store: &mut Store) {
     Command::new("clear").status().unwrap();
@@ -34,5 +35,8 @@ fn validate_option(user_input: String, store: &mut Store) {
     }
     if user_input == "2" {
         all_contacts(store);
+    }
+    if user_input == "3" {
+        search_by_name(store); 
     }
 }

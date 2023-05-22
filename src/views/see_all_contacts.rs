@@ -1,6 +1,7 @@
 use std::io;
 
 use crate::utils::storage::Store;
+use crate::views::menu::menu;
 
 pub fn all_contacts(store: &mut Store) {
         
@@ -20,5 +21,6 @@ pub fn all_contacts(store: &mut Store) {
     let mut ui = String::new();
     let _ui = io::stdin().read_line(&mut ui);
 
+    menu(store)
 
 }
